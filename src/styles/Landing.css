@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "DePixelBreitFett";
+  src: url("/Fonts/DePixelBreitFett.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Upheavtt";
+  src: url("/Fonts/upheavtt.ttf") format("truetype");
+}
+
 .landing-page {
   min-height: 100vh;
   width: 100%;
@@ -8,4 +20,42 @@
   overflow: hidden;
   color: white;
   font-family: Arial, sans-serif;
+}
+
+.main-menu {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.menu-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.menu-options a {
+  color: #ff40e6;
+  text-decoration: none;
+  font-size: 45px;
+  font-family: "Upheavtt";
+  letter-spacing: 3px;
+  transition: 0.3s ease;
+  text-shadow: 0 0 12px #ff00dd;
+}
+
+.menu-options a:hover {
+  color: #00eaff;
+  text-shadow: 0 0 12px #00eaff;
+  transform: scale(1.1);
 }
