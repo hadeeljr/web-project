@@ -4,7 +4,7 @@ function Landing() {
     <main className="landing-page">
 
   <section className="main-menu">
-    
+   
 
     <nav className="menu-options">
       <a href="/home">HOME</a>
@@ -14,7 +14,7 @@ function Landing() {
     </nav>
 
    
-  </section>
+   </section>
 
 </main>
 
