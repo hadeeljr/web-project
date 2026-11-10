@@ -1,11 +1,11 @@
 .login-background {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: 0;
 }
 
 
@@ -63,12 +63,13 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  position: relative;
 }
 
 .input-group input {
   width: 100%;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 15px 48px 15px 48px;
   background: rgba(125, 38, 38, 0.06);
   border: 1px solid #a879ff;
   border-radius: 4px;
@@ -81,7 +82,7 @@
 
 .input-group input::placeholder {
   color: #e880d1;
-  font-family:"Upheavtt";
+  font-family: "Upheavtt";
   font-size: 20px
 }
 
@@ -90,12 +91,59 @@
   box-shadow: 0 0 12px rgba(168, 121, 255, 0.5);
 }
 
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 57%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  color: #e880d1;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.input-icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.password-toggle img {
+  
+  
+  width: 24px;
+  height: 24px;
+  padding: 0px;
+  object-fit: contain;
+}
+
+.password-toggle:hover {
+  filter: drop-shadow(0 0 0px #8f387c);
+}
+
 .login-button {
-width: 50%;
+  width: 80%;
   margin-top: 10px;
-  margin-left:85px;
+  margin-left: 35px;
   background: #a36eac;
-  border:2px solid #c6a5ff;
+  border: 2px solid #c6a5ff;
   border-radius: 50px;
   color: rgba(217, 213, 231, 0.723);
   font-family: "Upheavtt", monospace;
@@ -104,7 +152,7 @@ width: 50%;
   cursor: pointer;
   transition: 0.3s ease;
   box-shadow: 0 0 12px rgba(224, 166, 228, 0.5);
- padding: 16px 15px;
+  padding: 16px 15px;
 }
 
 
@@ -123,7 +171,7 @@ width: 50%;
   font-size: 19px;
   text-align: center;
   line-height: 1;
-   font-family: "Upheavtt", monospace;
+  font-family: "Upheavtt", monospace;
 }
 
 .register-prompt a {
@@ -150,8 +198,18 @@ width: 50%;
 }
 
 .back-link:hover {
-  color:#f788ca;
+  color: #f788ca;
   text-shadow: 0 0 10px #7e5bc0;
+}
+
+.form-error {
+  margin: 0;
+  color: #ff6c9d;
+  font-family: "Upheavtt", monospace;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(255, 108, 157, 0.5);
 }
 
 /* RESPONSIVE DESIGN */
@@ -164,5 +222,5 @@ width: 50%;
   .login-title {
     font-size: 34px;
   }
-  
+
 }
