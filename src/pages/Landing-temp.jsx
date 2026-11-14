@@ -1,4 +1,5 @@
 import "../styles/Landing.css";
+import { Link } from "react-router-dom";
 function Landing() {
   return (
     <main className="landing-page">
@@ -7,10 +8,10 @@ function Landing() {
 
 
         <nav className="menu-options">
-          <a href="/home">HOME</a>
-          <a href="/login">LOGIN</a>
-          <a href="/register">REGISTER</a>
-          <a href="/about">ABOUT</a>
+          <Link to="/home">HOME</Link>
+          <Link to="/login">LOGIN</Link>
+          <Link to="/register">REGISTER</Link>
+          <Link to="/about">ABOUT</Link>
         </nav>
 
 
