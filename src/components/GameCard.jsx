@@ -16,7 +16,7 @@ function GameCard({ game, favorites, toggleFavorite }) {
           <img
             src={
               isFavorite
-                ? "/images/heart-filled.png"
+                ? "/images/heart-active.png"
                 : "/images/heart.png"
             }
             alt=""

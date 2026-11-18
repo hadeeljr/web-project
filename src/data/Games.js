@@ -1,5 +1,5 @@
 const GAMES = [
-  { id: 1, title: "Dead Cells", genre: "Adventure Metroidvania Action  Pixel Graphics  2D", year: 2018, rating: 8.3, image: "/images/games/dead-cells.jpg" },
+  { id: 1, title: "Dead Cells", genre: "Adventure",genre:" Metroidvania",genre:" Action  Pixel Graphics  2D", year: 2018, rating: 8.3, image: "/images/games/dead-cells.jpg" },
   { id: 2, title: "Game Two", genre: "RPG", year: 2020, rating: 4.8, image: "/images/games/game2.png" },
   { id: 3, title: "Game Three", genre: "Adventure", year: 2018, rating: 4.2, image: "/images/games/game3.png" },
   { id: 4, title: "Game Four", genre: "Puzzle", year: 2021, rating: 4.0, image: "/images/games/game4.png" },

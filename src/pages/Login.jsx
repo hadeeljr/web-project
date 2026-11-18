@@ -12,7 +12,6 @@ function Login() {
 
   return (
     <main className="login-page">
-
       <video id="myVideo" className="login-background" autoPlay loop muted playsInline>
         <source src="/images/login-back.mp4" type="video/mp4" />
       </video>

@@ -65,36 +65,42 @@ function Header({
 
         {/* Favorites */}
         <button
-          className={`icon - btn ${showOnlyFavorites ? "active" : ""}`}
-        title="Favorites"
-        aria-label="Favorites"
-        onClick={() => setShowOnlyFavorites(!showOnlyFavorites)}
->
-        <img src="/images/heart.png" alt="" />
+          className={`icon-btn ${showOnlyFavorites ? "active" : ""}`}
+          title="Favorites"
+          aria-label="Favorites"
+          onClick={() => setShowOnlyFavorites(!showOnlyFavorites)}
+        >
+          <img
+            src={
+              showOnlyFavorites
+                ? "/images/heart-active.png"
+                : "/images/heart.png"
+            }
+            alt=""
+          />
+          {favorites.length > 0 && (
+            <span className="badge">{favorites.length}</span>
+          )}
+        </button>
 
-        {favorites.length > 0 && (
-          <span className="badge">{favorites.length}</span>
-        )}
-      </button>
+        <a
+          href="/login"
+          className="icon-btn"
+          title="Login"
+          aria-label="Login"
+        >
+          <img src="/images/login.png" alt="" />
+        </a>
 
-      <a
-        href="/login"
-        className="icon-btn"
-        title="Login"
-        aria-label="Login"
-      >
-        <img src="/images/login.png" alt="" />
-      </a>
-
-      <a
-        href="/register"
-        className="icon-btn"
-        title="Register"
-        aria-label="Register"
-      >
-        <img src="/images/register.png" alt="" />
-      </a>
-    </nav>
+        <a
+          href="/register"
+          className="icon-btn"
+          title="Register"
+          aria-label="Register"
+        >
+          <img src="/images/register.png" alt="" />
+        </a>
+      </nav>
     </header >
   );
 }

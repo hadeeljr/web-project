@@ -28,8 +28,6 @@ function Register() {
         <source src="/images/login-back.mp4" type="video/mp4" />
       </video>
 
-
-
       <section className="login-container">
         <h1 className="login-title">PIXEL REALM</h1>
 

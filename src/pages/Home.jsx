@@ -4,6 +4,7 @@ import GAMES from "../data/Games";
 import GameList from "../components/GameList";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Filter from "../components/Filter";
 
 function Home() {
   const [games, setGames] = useState(GAMES);
@@ -13,13 +14,14 @@ function Home() {
   const [favorites, setFavorites] = useState([]); // array of game ids
   const [showOnlyFavorites, setShowOnlyFavorites] = useState(false);
   const [selectedGenre, setSelectedGenre] = useState("all");
+
   const toggleFavorite = (id) => {
     setFavorites((prev) =>
       prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id]
     );
   };
 
-  // filte 
+  // sort
   const visibleGames = games
     .filter((g) => g.title.toLowerCase().includes(search.toLowerCase()))
     .filter((g) => selectedGenre === "all" || g.genre === selectedGenre)
@@ -53,8 +55,7 @@ function Home() {
         favorites={favorites}
       />
 
-
-      {/* Main */}
+       {/* Main  */}
       <main className="home-content">
         <section className="home-intro">
           <h1>Explore the Realm</h1>
@@ -63,20 +64,15 @@ function Home() {
 
         {/* Game library */}
         <section className="game-library">
-          <h2>{showOnlyFavorites ? "My Favorites" : "Explore Games"}</h2>
-          <select
-            value={selectedGenre}
-            onChange={(e) => setSelectedGenre(e.target.value)}
-            className="genre-filter"
-          >
-            <option value="all">All Genres</option>
+          <div className="library-heading">
 
-            {[...new Set(games.map((game) => game.genre))].map((genre) => (
-              <option key={genre} value={genre}>
-                {genre}
-              </option>
-            ))}
-          </select>
+            <h2>{showOnlyFavorites ? "My Favorites" : "Explore Games"}</h2>
+            <Filter
+              games={games}
+              selectedGenre={selectedGenre}
+              setSelectedGenre={setSelectedGenre}
+            />
+          </div>
 
           <GameList
             games={visibleGames}
@@ -87,7 +83,9 @@ function Home() {
           {visibleGames.length === 0 && (
             <p className="no-results">No games found.</p>
           )}
+
         </section>
+
       </main>
       <Footer />
 

@@ -8,7 +8,6 @@
   z-index: 0;
 }
 
-
 .login-page {
   min-height: 100vh;
   width: 100%;
@@ -35,7 +34,6 @@
   position: relative;
   z-index: 2;
 }
-
 
 .login-title {
   font-family: "Upheavtt", monospace;
