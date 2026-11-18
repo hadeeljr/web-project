@@ -3,6 +3,14 @@ import { useState } from "react";
 function Filter({ games, selectedGenre, setSelectedGenre }) {
     const [showGenreMenu, setShowGenreMenu] = useState(false);
 
+const allGenres = [
+    ...new Set(
+        games.flatMap((game) =>
+            Array.isArray(game.genre) ? game.genre : [game.genre]
+        )
+    ),
+];
+
     return (
         <div className="genre-filter-wrapper">
             <button
@@ -22,14 +30,11 @@ function Filter({ games, selectedGenre, setSelectedGenre }) {
                         setShowGenreMenu(false);
                     }}
                     className="genre-filter"
-                    size={Math.min(
-                        [...new Set(games.map((game) => game.genre))].length + 1,
-                        6
-                    )}
+                   size={Math.min(allGenres.length + 1, 6)}
                 >
                     <option value="all">All Genres</option>
 
-                    {[...new Set(games.map((game) => game.genre))].map((genre) => (
+                   {allGenres.map((genre) => (
                         <option key={genre} value={genre}>
                             {genre}
                         </option>

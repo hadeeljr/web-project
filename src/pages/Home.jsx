@@ -24,7 +24,7 @@ function Home() {
   // sort
   const visibleGames = games
     .filter((g) => g.title.toLowerCase().includes(search.toLowerCase()))
-    .filter((g) => selectedGenre === "all" || g.genre === selectedGenre)
+   .filter((g) => selectedGenre === "all" || (Array.isArray(g.genre) ? g.genre.includes(selectedGenre) : g.genre === selectedGenre))
     .filter((g) => (showOnlyFavorites ? favorites.includes(g.id) : true))
     .sort((a, b) => {
       if (sortBy === "name") return a.title.localeCompare(b.title);
