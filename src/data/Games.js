@@ -1,6 +1,6 @@
 const GAMES = [
-  { id: 1, title:"Dead Cells", genre:[" Adventure", " Metroidvania"," Action", " Pixel Graphics", " 2D"] ,year: 2018, rating: 8.3, image: "/images/games/dead-cells.jpg" },
-  { id: 2, title: "Game Two", genre: "RPG", year: 2020, rating: 4.8, image: "/images/games/game2.png" },
+  { id: 1, title:"Dead Cells", genre:[" Adventure", " Metroidvania"," Action", " Pixel Graphics"] ,year: 2018, rating: 8.3, image: "/images/games/dead-cells.jpg" },
+  { id: 2, title: "Ori and the Will of the Wisps ", genre: ["Metroidvania" , " Action" , "Adventure"], year: 2020, rating: 4.8, image: "/images/games/Ori-and-the-Will.jpg" },
   { id: 3, title: "Game Three", genre: "Adventure", year: 2018, rating: 4.2, image: "/images/games/game3.png" },
   { id: 4, title: "Game Four", genre: "Puzzle", year: 2021, rating: 4.0, image: "/images/games/game4.png" },
   { id: 5, title: "Game Five", genre: "Roguelike", year: 2017, rating: 4.9, image: "/images/games/game5.png" },
